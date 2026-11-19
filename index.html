@@ -27,7 +27,7 @@
     max-width: 600px;
     margin: auto;
 }
-    <audio id="bgMusic" src="love-song.mp3" loop></audio>
+    <audio id="bgMusic" src="love-song.mp3" loop preload="auto"></audio>
         body {
             min-height: 100vh;
             display: flex;
@@ -119,9 +119,7 @@ function startSurprise() {
 
     music.volume = 0.5;
 
-    music.play().catch((error) => {
-        console.log("Music could not start:", error);
-    });
+    music.play();
 
     window.location.href = "question.html";
 }
