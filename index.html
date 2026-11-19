@@ -4,63 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Special Surprise for JO ❤️</title>
+    <title>Hey JO ❤️</title>
 
     <style>
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
         }
 
-        <audio id="bgMusic" src="love-song.mp3" loop controls></audio>
-
         body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.container {
-    width: 90%;
-    max-width: 600px;
-    margin: auto;
-}
-    <audio id="bgMusic" src="love-song.mp3" loop preload="auto"></audio>
-        body {
+            margin: 0;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: Georgia, serif;
-            background: linear-gradient(135deg, #ffe0ec, #ffc2d8, #fff0f5);
-            overflow: hidden;
             text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffb6c1, #ffe4e1);
         }
 
         .welcome-box {
-            background: rgba(255,255,255,0.85);
-            padding: 45px 25px;
-            border-radius: 25px;
             width: 90%;
-            max-width: 500px;
-            box-shadow: 0 10px 35px rgba(180,50,100,0.2);
+            max-width: 600px;
+            padding: 30px;
         }
 
-        h1 {
-            color: #c03970;
-            font-size: 38px;
-            margin-bottom: 20px;
+        .heart {
+            font-size: 55px;
+            animation: heartbeat 1s infinite;
         }
 
-        p {
-            color: #75435a;
-            font-size: 19px;
-            margin-bottom: 30px;
-            line-height: 1.6;
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
         }
 
         button {
@@ -71,23 +46,6 @@
             border-radius: 30px;
             font-size: 20px;
             cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background: #c03970;
-            transform: scale(1.08);
-        }
-
-        .heart {
-            font-size: 55px;
-            margin-bottom: 20px;
-            animation: heartbeat 1s infinite;
-        }
-
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
         }
     </style>
 </head>
@@ -104,26 +62,31 @@
             A little surprise, made with lots of love.
         </p>
 
-        
+        <button onclick="startSurprise()">
+            CLICK HERE JO ❤️
+        </button>
+
+        <br><br>
+
+        <audio id="bgMusic" src="love-song.mp3" controls loop>
+        </audio>
+    </div>
+
+    <script>
+        function startSurprise() {
+            const music = document.getElementById("bgMusic");
+
+            music.volume = 0.5;
+
+            music.play().then(() => {
+                setTimeout(() => {
+                    window.location.href = "question.html";
+                }, 1500);
+            }).catch(() => {
+                alert("First press the Play button below to start our song ❤️");
+            });
+        }
+    </script>
 
 </body>
 </html>
-
-<button onclick="startSurprise()">
-    CLICK HERE JO ❤️
-</button>
-
-<audio id="bgMusic" src="love-song.mp3" loop></audio>
-
-<script>
-function startSurprise() {
-    const music = document.getElementById("bgMusic");
-
-    music.volume = 0.5;
-
-    music.play();
-
-    window.location.href = "question.html";
-}
-</script>
-
