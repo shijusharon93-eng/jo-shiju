@@ -12,7 +12,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+    <audio id="bgMusic" src="love-song.mp3" loop></audio>
         body {
             min-height: 100vh;
             display: flex;
@@ -93,10 +93,18 @@
     </div>
 
     <script>
-        function startSurprise() {
-            alert("Welcome to our little world of love, JO! ❤️");
-        }
-    </script>
+    function startSurprise() {
+        const music = document.getElementById("bgMusic");
+
+        music.volume = 0.5;
+
+        music.play().then(() => {
+            window.location.href = "question.html";
+        }).catch(() => {
+            window.location.href = "question.html";
+        });
+    }
+</script>
 
 </body>
 </html>
