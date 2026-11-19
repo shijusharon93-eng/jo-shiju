@@ -87,24 +87,27 @@
             A little surprise, made with lots of love.
         </p>
 
-        <button onclick="startSurprise()">
-            CLICK HERE JO ❤️
-        </button>
-    </div>
-
-    <script>
-    function startSurprise() {
-        const music = document.getElementById("bgMusic");
-
-        music.volume = 0.5;
-
-        music.play().then(() => {
-            window.location.href = "question.html";
-        }).catch(() => {
-            window.location.href = "question.html";
-        });
-    }
-</script>
+        
 
 </body>
 </html>
+
+<button onclick="startSurprise()">
+    CLICK HERE JO ❤️
+</button>
+
+<audio id="bgMusic" src="love-song.mp3" loop></audio>
+
+<script>
+function startSurprise() {
+    const music = document.getElementById("bgMusic");
+
+    music.volume = 0.5;
+
+    music.play().catch((error) => {
+        console.log("Music could not start:", error);
+    });
+
+    window.location.href = "question.html";
+}
+</script>
