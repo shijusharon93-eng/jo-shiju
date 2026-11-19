@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reasons I Love You ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            text-align: center;
+            font-family: Georgia, serif;
+            background: linear-gradient(135deg, #ffe0ec, #ffc2d8);
+            color: #75435a;
+        }
+
+        h1 {
+            color: #c03970;
+            font-size: 36px;
+        }
+
+        .intro {
+            font-size: 19px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .reasons {
+            max-width: 650px;
+            margin: auto;
+            display: grid;
+            gap: 18px;
+        }
+
+        .reason {
+            background: rgba(255,255,255,0.9);
+            padding: 22px;
+            border-radius: 18px;
+            box-shadow: 0 5px 18px rgba(180,50,100,0.15);
+            font-size: 19px;
+            animation: appear 1s ease both;
+        }
+
+        .reason:nth-child(2) { animation-delay: 0.2s; }
+        .reason:nth-child(3) { animation-delay: 0.4s; }
+        .reason:nth-child(4) { animation-delay: 0.6s; }
+        .reason:nth-child(5) { animation-delay: 0.8s; }
+        .reason:nth-child(6) { animation-delay: 1s; }
+
+        .emoji {
+            font-size: 30px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background: #e75480;
+            color: white;
+            padding: 16px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 19px;
+            cursor: pointer;
+            margin: 35px 0;
+        }
+
+        button:hover {
+            background: #c03970;
+            transform: scale(1.05);
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Reasons I Love You ❤️</h1>
+
+    <p class="intro">
+        JO, I could write a thousand reasons...
+        but here are just a few from my heart. 💗
+    </p>
+
+    <div class="reasons">
+
+        <div class="reason">
+            <span class="emoji">😊</span>
+            Your smile makes my whole day beautiful.
+        </div>
+
+        <div class="reason">
+            <span class="emoji">❤️</span>
+            You make my life more meaningful.
+        </div>
+
+        <div class="reason">
+            <span class="emoji">🥰</span>
+            I love the way you make me feel special.
+        </div>
+
+        <div class="reason">
+            <span class="emoji">🌸</span>
+            Your presence makes every moment better.
+        </div>
+
+        <div class="reason">
+            <span class="emoji">🤗</span>
+            You are my happiness and my comfort.
+        </div>
+
+        <div class="reason">
+            <span class="emoji">💍</span>
+            Because I want to choose you, every single day.
+        </div>
+
+    </div>
+
+    <h2 style="color:#c03970;">
+        And my biggest reason... YOU ARE MY JO! ❤️
+    </h2>
+
+    <button onclick="window.location.href='final.html'">
+        One Last Surprise 💌
+    </button>
+
+</body>
+</html>
