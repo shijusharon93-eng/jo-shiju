@@ -16,6 +16,19 @@
             scroll-behavior: smooth;
         }
 
+        <audio id="bgMusic" src="love-song.mp3" autoplay loop></audio>
+
+<script>
+    const music = document.getElementById("bgMusic");
+    music.volume = 0.5;
+
+    music.play().catch(() => {
+        document.addEventListener("click", () => {
+            music.play();
+        }, { once: true });
+    });
+</script>
+
         body {
             margin: 0;
             font-family: Georgia, serif;
