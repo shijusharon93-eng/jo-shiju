@@ -79,21 +79,17 @@
 </div> 
     </div>
 
-    <script>
-        function startSurprise() {
-            const music = document.getElementById("bgMusic");
+   <script>
+    function startSurprise() {
+        const music = document.getElementById("bgMusic");
 
-            music.volume = 0.5;
-
-            music.play().then(() => {
-                setTimeout(() => {
-                    window.location.href = "question.html";
-                }, 1500);
-            }).catch(() => {
-                alert("First press the Play button below to start our song ❤️");
-            });
+        if (music) {
+            music.play().catch(() => {});
         }
-    </script>
+
+        window.location.href = "question.html";
+    }
+</script> 
 
 </body>
 </html>
