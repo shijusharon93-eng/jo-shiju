@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Question for JO ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ffe0ec, #ffc2d8);
+            font-family: Georgia, serif;
+            overflow: hidden;
+        }
+
+        .box {
+            background: white;
+            width: 90%;
+            max-width: 500px;
+            padding: 40px 20px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 10px 35px rgba(180,50,100,0.2);
+        }
+
+        h1 {
+            color: #c03970;
+            font-size: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        button {
+            padding: 14px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        #yes {
+            background: #e75480;
+            color: white;
+        }
+
+        #no {
+            background: #777;
+            color: white;
+            position: relative;
+        }
+
+        #message {
+            color: #c03970;
+            margin-top: 25px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <div style="font-size:55px;">💗</div>
+
+        <h1>JO, will you be my better half?</h1>
+
+        <div class="buttons">
+            <button id="yes" onclick="sayYes()">YES ❤️</button>
+            <button id="no">NO 🙈</button>
+        </div>
+
+        <p id="message"></p>
+    </div>
+
+    <script>
+        const noButton = document.getElementById("no");
+        const message = document.getElementById("message");
+
+        function runAway() {
+            noButton.style.position = "fixed";
+
+            const maxX = window.innerWidth - noButton.offsetWidth;
+            const maxY = window.innerHeight - noButton.offsetHeight;
+
+            const x = Math.random() * Math.max(0, maxX);
+            const y = Math.random() * Math.max(0, maxY);
+
+            noButton.style.left = x + "px";
+            noButton.style.top = y + "px";
+
+            message.textContent = "NO button unnaala pudikka mudiyathu! YES mattum click aagum, baby! 😜";
+        }
+
+        noButton.addEventListener("mouseenter", runAway);
+        noButton.addEventListener("touchstart", function(event) {
+            event.preventDefault();
+            runAway();
+        });
+
+        noButton.addEventListener("click", function(event) {
+            event.preventDefault();
+            runAway();
+        });
+
+        function sayYes() {
+            window.location.href = "memories.html";
+        }
+    </script>
+
+</body>
+</html>
