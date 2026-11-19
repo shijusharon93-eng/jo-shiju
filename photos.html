@@ -79,34 +79,22 @@
             padding: 10px;
         }
 
-        @keyframes romanticEffect {
-            0% {
-                transform: scale(1.08);
-                filter: blur(5px);
-            }
+       @keyframes romanticEffect {
+    0% {
+        transform: scale(1);
+        filter: blur(0);
+    }
 
-            15% {
-                transform: scale(1.04);
-                filter: blur(0);
-            }
+    50% {
+        transform: scale(1.08);
+        filter: blur(0);
+    }
 
-            50% {
-                transform: scale(1);
-                filter: blur(0);
-            }
-
-            85% {
-                transform: scale(1.05);
-                filter: blur(0);
-            }
-
-            100% {
-                transform: scale(1.08);
-                filter: blur(3px);
-            }
-        }
-
-        .final-section {
+    100% {
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
             min-height: 60vh;
             display: flex;
             flex-direction: column;
