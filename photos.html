@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Beautiful Memories ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            text-align: center;
+            font-family: Georgia, serif;
+            background: linear-gradient(135deg, #ffe0ec, #ffc2d8);
+        }
+
+        h1 {
+            color: #c03970;
+            font-size: 35px;
+        }
+
+        p {
+            color: #75435a;
+            font-size: 18px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            max-width: 750px;
+            margin: 30px auto;
+        }
+
+        .photo {
+            background: white;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(180,50,100,0.2);
+        }
+
+        .photo img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .photo p {
+            font-size: 16px;
+            color: #c03970;
+        }
+
+        button {
+            background: #e75480;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 20px;
+        }
+
+        @media (max-width: 500px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .photo img {
+                height: 260px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Beautiful Memories ❤️</h1>
+
+    <p>
+        Six moments, countless feelings...
+        Every picture tells our love story. 🥰
+    </p>
+
+    <div class="gallery">
+
+        <div class="photo">
+            <img src="images/photo1.jpg" alt="Our memory 1">
+            <p>Our Beautiful Moment ❤️</p>
+        </div>
+
+        <div class="photo">
+            <img src="images/photo2.jpg" alt="Our memory 2">
+            <p>Your Beautiful Smile 😊</p>
+        </div>
+
+        <div class="photo">
+            <img src="images/photo3.jpg" alt="Our memory 3">
+            <p>Forever Together 💕</p>
+        </div>
+
+        <div class="photo">
+            <img src="images/photo4.jpg" alt="Our memory 4">
+            <p>My Favourite Person 🥰</p>
+        </div>
+
+        <div class="photo">
+            <img src="images/photo5.jpg" alt="Our memory 5">
+            <p>Memories to Keep Forever 💖</p>
+        </div>
+
+        <div class="photo">
+            <img src="images/photo6.jpg" alt="Our memory 6">
+            <p>My Forever JO ❤️</p>
+        </div>
+
+    </div>
+
+    <button onclick="window.location.href='reasons.html'">
+        Reasons I Love You ❤️
+    </button>
+
+</body>
+</html>
