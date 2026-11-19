@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Our Beautiful Memories ❤️</title>
 
     <style>
@@ -11,69 +12,135 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
-            padding: 30px 15px;
-            text-align: center;
             font-family: Georgia, serif;
+            text-align: center;
             background: linear-gradient(135deg, #ffe0ec, #ffc2d8);
+            color: #75435a;
+        }
+
+        header {
+            min-height: 35vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 25px;
         }
 
         h1 {
             color: #c03970;
-            font-size: 35px;
+            font-size: 34px;
         }
 
-        p {
-            color: #75435a;
+        header p {
             font-size: 18px;
+            line-height: 1.6;
         }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-            max-width: 750px;
-            margin: 30px auto;
+        .photo-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 25px 15px;
+            scroll-snap-align: center;
         }
 
-        .photo {
+        .photo-card {
             background: white;
-            padding: 10px;
-            border-radius: 15px;
-            box-shadow: 0 5px 18px rgba(180,50,100,0.2);
+            padding: 12px;
+            width: 90%;
+            max-width: 430px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(180, 50, 100, 0.25);
+            overflow: hidden;
         }
 
-        .photo img {
+        .photo-card img {
             width: 100%;
-            height: 230px;
+            height: 65vh;
+            max-height: 550px;
+            min-height: 300px;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 14px;
+
+            animation: romanticEffect 10s ease-in-out forwards;
         }
 
-        .photo p {
-            font-size: 16px;
+        .photo-card p {
             color: #c03970;
+            font-size: 19px;
+            padding: 10px;
+        }
+
+        @keyframes romanticEffect {
+            0% {
+                transform: scale(1.08);
+                filter: blur(5px);
+            }
+
+            15% {
+                transform: scale(1.04);
+                filter: blur(0);
+            }
+
+            50% {
+                transform: scale(1);
+                filter: blur(0);
+            }
+
+            85% {
+                transform: scale(1.05);
+                filter: blur(0);
+            }
+
+            100% {
+                transform: scale(1.08);
+                filter: blur(3px);
+            }
+        }
+
+        .final-section {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 15px;
+        }
+
+        .final-section h2 {
+            color: #c03970;
+            font-size: 30px;
         }
 
         button {
             background: #e75480;
             color: white;
-            padding: 15px 30px;
             border: none;
+            padding: 16px 30px;
             border-radius: 30px;
             font-size: 18px;
             cursor: pointer;
-            margin: 20px;
         }
 
-        @media (max-width: 500px) {
-            .gallery {
-                grid-template-columns: 1fr;
+        button:hover {
+            background: #c03970;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
             }
 
-            .photo img {
-                height: 260px;
+            .photo-card img {
+                animation: none;
             }
         }
     </style>
@@ -81,50 +148,91 @@
 
 <body>
 
-    <h1>Our Beautiful Memories ❤️</h1>
+    <header>
+        <h1>Our Beautiful Memories ❤️</h1>
 
-    <p>
-        Six moments, countless feelings...
-        Every picture tells our love story. 🥰
-    </p>
+        <p>
+            Six moments, countless feelings...
+            Every picture tells our love story. 🥰
+        </p>
 
-    <div class="gallery">
+        <p>Take your time, my love. ❤️</p>
+    </header>
 
-        <div class="photo">
-            <img src="images/photo1.jpg" alt="Our memory 1">
+    <section class="photo-section" id="photo1">
+        <div class="photo-card">
+            <img src="images/photo1.jpg" alt="Our first memory">
             <p>Our Beautiful Moment ❤️</p>
         </div>
+    </section>
 
-        <div class="photo">
-            <img src="images/photo2.jpg" alt="Our memory 2">
+    <section class="photo-section" id="photo2">
+        <div class="photo-card">
+            <img src="images/photo2.jpg" alt="Your beautiful smile">
             <p>Your Beautiful Smile 😊</p>
         </div>
+    </section>
 
-        <div class="photo">
-            <img src="images/photo3.jpg" alt="Our memory 3">
+    <section class="photo-section" id="photo3">
+        <div class="photo-card">
+            <img src="images/photo3.jpg" alt="Forever together">
             <p>Forever Together 💕</p>
         </div>
+    </section>
 
-        <div class="photo">
-            <img src="images/photo4.jpg" alt="Our memory 4">
+    <section class="photo-section" id="photo4">
+        <div class="photo-card">
+            <img src="images/photo4.jpg" alt="My favourite person">
             <p>My Favourite Person 🥰</p>
         </div>
+    </section>
 
-        <div class="photo">
-            <img src="images/photo5.jpg" alt="Our memory 5">
+    <section class="photo-section" id="photo5">
+        <div class="photo-card">
+            <img src="images/photo5.jpg" alt="Our lovely memories">
             <p>Memories to Keep Forever 💖</p>
         </div>
+    </section>
 
-        <div class="photo">
-            <img src="images/photo6.jpg" alt="Our memory 6">
+    <section class="photo-section" id="photo6">
+        <div class="photo-card">
+            <img src="images/photo6.jpg" alt="My forever JO">
             <p>My Forever JO ❤️</p>
         </div>
+    </section>
 
-    </div>
+    <section class="final-section">
+        <h2>Every moment with you is special! ❤️</h2>
 
-    <button onclick="window.location.href='reasons.html'">
-        Reasons I Love You ❤️
-    </button>
+        <p>
+            And now, I have something more to tell you...
+        </p>
+
+        <button onclick="window.location.href='reasons.html'">
+            Reasons I Love You ❤️
+        </button>
+    </section>
+
+    <script>
+        const photos = document.querySelectorAll(".photo-section");
+
+        let currentPhoto = 0;
+
+        function showNextPhoto() {
+            if (currentPhoto < photos.length - 1) {
+                currentPhoto++;
+
+                photos[currentPhoto].scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            } else {
+                clearInterval(slideshow);
+            }
+        }
+
+        const slideshow = setInterval(showNextPhoto, 10000);
+    </script>
 
 </body>
 </html>
